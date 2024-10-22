@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Profile</title>
+    <link rel="stylesheet" href="../homepage/style.css">
+    <link rel="stylesheet" href="profile.css">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <section id="header">
+        <a href="#"><img src="../homepage/images/tcs.svg" class="logotcs" alt="TCS Logo"></a>
+        <a href="#"><img src="../homepage/images/tata.svg" class="logo" alt="Tata Logo"></a>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile" id="profile">
+        <div class="content">
+            <h1>Manager Profile</h1>
+            <div class="profile-image-container">
+                <img id="profileImage" src="" alt="Profile Picture" />
+            </div>
+            <div class="profile-info">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <span id="name"></span>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role:</label>
+                    <span id="role">Manager</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <span id="email"></span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <span id="phone"></span>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <span id="address"></span>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department:</label>
+                    <span id="department"></span>
+                </div>
+                <div class="form-group">
+                    <label for="joiningDate">Joining Date:</label>
+                    <span id="joiningDate"></span>
+                </div>
+                <div class="form-group">
+                    <label for="grade">Grade:</label>
+                    <span id="grade"></span>
+                </div>
+            </div>
+            <div class="btn-container">
+                <a href="edit-profile.html" class="btn">Edit Profile</a>
+                <a href="../homepage/index.html" class="btn-secondary">Logout</a>
+                <a id="dashboardBtn" class="btn-dashboard">Go to Dashboard</a>
+            </div>
+        </div>
+    </section>  
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="col">
+            <a href="#">About</a>
+            <a href="../homepage/index.html">Home</a> 
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024, IT - CHANGE REQUEST</p>
+        </div>
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+</html>

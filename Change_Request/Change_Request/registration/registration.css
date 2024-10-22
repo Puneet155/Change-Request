@@ -1,0 +1,148 @@
+/* registration.css */
+
+/* General Registration Page Styles */
+.registration {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../homepage/images/main.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative; /* Positioning for the overlay */
+}
+
+.registration::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    z-index: 1;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.95); /* White background with slight transparency */
+    padding: 3rem; /* Adjusted padding for a balanced feel */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.25); /* Softer and deeper shadow */
+    width: 450px; /* Fixed width for form */
+    text-align: center; /* Center the text */
+    z-index: 2; /* Ensure content is above overlay */
+}
+
+.content h1 {
+    font-size: 3rem; /* Reduced font size for the header */
+    color: var(--primary-color);
+    margin-bottom: 0.5rem; /* Reduced margin */
+    letter-spacing: 1.5px; /* Increased letter spacing */
+    text-transform: uppercase; /* Uppercase for modern touch */
+}
+
+.content p {
+    font-size: 1.4rem; /* Reduced font size */
+    margin-bottom: 2rem; /* Increased margin for better spacing */
+    color: #555; /* Slightly darker for better readability */
+}
+
+.form-group {
+    margin-bottom: 1.5rem; /* Reduced margin for spacing */
+    text-align: left; /* Align label and input text to the left */
+}
+
+label {
+    display: block;
+    font-size: 1.3rem; /* Reduced font size for labels */
+    margin-bottom: 0.3rem; /* Reduced margin */
+    color: #333; /* Darker label color */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+input, select {
+    width: 100%;
+    padding: 1.2rem; /* Reduced padding for a more compact feel */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* More rounded input */
+    font-size: 1.4rem; /* Reduced font size */
+    transition: border 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
+    text-transform: none; /* Prevents automatic uppercase transformation */
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.5); /* Subtle shadow on focus */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 1.5rem 4rem;
+    background: var(--primary-color);
+    color: white;
+    font-size: 1.8rem; /* Reduced button font size */
+    border-radius: 25px; /* More rounded button */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.2s; /* Added transform transition */
+    width: 100%; /* Full width */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for buttons */
+    position: relative; /* Position for hover effect */
+}
+
+.btn:hover {
+    background-color: #f57c00; /* Darker shade on hover */
+    transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
+.links {
+    margin-top: 2rem; /* Increased margin for better spacing */
+}
+
+.links a {
+    color: var(--primary-color);
+    font-size: 1.4rem; /* Slightly smaller font size */
+    text-decoration: none;
+    transition: color 0.3s; /* Transition for color change */
+}
+
+.links a:hover {
+    color: #f57c00; /* Change color on hover */
+}
+
+.links span {
+    color: #777; /* Color for the separator */
+}
+
+/* Hidden class for toggling visibility */
+.hidden {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content {
+        width: 90%; /* Responsive width */
+        padding: 2rem; /* Reduced padding for smaller screens */
+    }
+
+    .content h1 {
+        font-size: 2.5rem; /* Smaller heading on mobile */
+    }
+
+    .content p {
+        font-size: 1.3rem; /* Smaller paragraph on mobile */
+    }
+
+    .btn {
+        font-size: 1.6rem; /* Smaller button font size on mobile */
+    }
+
+    label, input, select {
+        font-size: 1.2rem; /* Smaller label and input sizes */
+    }
+}

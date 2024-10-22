@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="../homepage/style.css"> <!-- Same CSS file as homepage -->
+    <link rel="stylesheet" href="dashboard.css"> <!-- Separate CSS for employee dashboard -->
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js';
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js';
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js';
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCfUzxIGI6W7L1hIPuhhcmOP2BLrW3rVV8",
+            authDomain: "change-request-4cdd9.firebaseapp.com",
+            projectId: "change-request-4cdd9",
+            storageBucket: "change-request-4cdd9.appspot.com",
+            messagingSenderId: "922890755209",
+            appId: "1:922890755209:web:55ad6f4dbfcab2c0477a58"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        // Expose Firebase to the global scope
+        window.firebase = { app, db, auth }; // Now you can access Firebase as window.firebase in dashboard.js
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <section id="header">
+        <a href="#"><img src="../homepage/images/tcs.svg" class="logotcs" alt="TCS Logo"></a>
+        <a href="#"><img src="../homepage/images/tata.svg" class="logo" alt="Tata Logo"></a>
+    </section>
+
+    <!-- Employee Dashboard Content -->
+    <section class="dashboard-content">
+        <h2>Employee Dashboard</h2>
+
+        <!-- Change Type Selection -->
+        <div class="request-change">
+            <h3>Select Request Type</h3>
+            <label for="requestType">Choose an option:</label>
+            <select id="requestType">
+                <option value="" disabled selected>Select a request type</option>
+                <option value="shift">Shift Change</option>
+                <option value="feature">Feature Change</option>
+            </select>
+        </div>
+
+        <!-- Shift Change Request -->
+        <div id="shiftChangeSection" class="request-section" style="display: none;">
+            <h3>Request a Shift Change</h3>
+            <form id="shiftChangeForm">
+                <label for="currentShift">Current Shift:</label>
+                <select id="currentShift" name="currentShift">
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                </select>
+
+                <label for="newShift">New Shift:</label>
+                <select id="newShift" name="newShift" required>
+                    <option value="" disabled selected>Select a shift</option>
+                    <option value="b">A to B</option>
+                    <option value="c">A to C</option>
+                    <option value="a">B to A</option>
+                    <option value="c">B to C</option>
+                    <option value="a">C to A</option>
+                    <option value="b">C to B</option>
+                </select>
+
+                <button type="submit">Submit Shift Change</button>
+            </form>
+        </div>
+
+        <!-- Feature Change Request -->
+        <div id="featureChangeSection" class="request-section" style="display: none;">
+            <h3>Request a Feature Change</h3>
+            <form id="featureChangeForm">
+                <label for="featureChangeType">Select Feature Change Type:</label>
+                <select id="featureChangeType" name="featureChangeType" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="add_new">Add New Feature</option>
+                    <option value="remove">Remove Feature</option>
+                    <option value="modify">Modify Feature</option>
+                    <option value="enable">Enable/Disable Feature</option>
+                    <option value="prioritize">Prioritize Feature</option>
+                    <option value="rename">Rename Feature</option>
+                    <option value="reorder">Reorder Features</option>
+                </select>
+
+                <label for="featureDetails">Provide Details:</label>
+                <input type="text" id="featureDetails" name="featureDetails" placeholder="Details about the change" required>
+
+                <button type="submit">Submit Feature Change</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="col">
+            <a href="#">About</a>
+            <a href="../homepage/index.html">Home</a> 
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024, IT - CHANGE REQUEST</p>
+        </div>
+    </footer>
+
+    <!-- Dashboard JavaScript -->
+    <script src="dashboard.js" type="module"></script> <!-- Separate JS for employee dashboard -->
+</body>
+</html>

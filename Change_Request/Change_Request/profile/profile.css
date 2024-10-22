@@ -1,0 +1,123 @@
+/* General Profile Page Styles */
+.profile {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../homepage/images/main.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.95); /* White background with slight transparency */
+    padding: 3rem;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    width: 400px; /* Fixed width for form */
+    text-align: center; /* Center the text */
+}
+
+.content h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-transform: none; /* Prevent uppercase transformation */
+}
+
+.profile-info {
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: bold;
+    text-transform: none; /* Prevent uppercase transformation */
+}
+
+span {
+    font-size: 1.6rem;
+    color: #333; /* Darker color for text */
+    text-transform: none; /* Prevent uppercase transformation */
+}
+
+/* Button Styles */
+.btn {
+    padding: 1.5rem 4rem;
+    background: var(--primary-color);
+    color: var(--white);
+    font-size: 1.6rem; /* Slightly smaller font size */
+    border-radius: 5rem;
+    text-align: center;
+    display: inline-block;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}
+
+.btn-secondary {
+    padding: 1.5rem 4rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    font-size: 1.6rem;
+    border-radius: 5rem;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}
+
+.btn:hover, .btn-secondary:hover {
+    transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
+/* Styles for the Dashboard Button */
+.btn-dashboard {
+    padding: 1.5rem 4rem;
+    background: var(--primary-color); /* Same as primary button */
+    color: var(--white);
+    font-size: 1.6rem;
+    border-radius: 5rem;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}
+
+.btn-dashboard:hover {
+    transform: translateY(-3px); /* Hover effect */
+}
+
+/* Footer Styling */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+footer .col {
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: white;
+    margin-right: 2rem;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}

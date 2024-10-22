@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard</title>
+    <link rel="stylesheet" href="../homepage/style.css">
+    <link rel="stylesheet" href="manager-dashboard.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <section id="header">
+        <a href="#"><img src="../homepage/images/tcs.svg" class="logotcs" alt="TCS Logo"></a>
+        <a href="#"><img src="../homepage/images/tata.svg" class="logo" alt="Tata Logo"></a>
+    </section>
+
+    <!-- Manager Dashboard Content -->
+    <section class="dashboard-content">
+        <h2>Manager Dashboard</h2>
+    
+        <!-- Approve Shift Change Requests -->
+        <div class="request-section">
+            <h3>Pending Shift Change Requests</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Current Shift</th>
+                        <th>Requested Shift</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="shiftChangeRequests">
+                    <!-- Rows for shift change requests will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Assign Developer for Feature Change Requests -->
+        <div class="request-section">
+            <h3>Pending Feature Change Requests</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Feature Change Type</th>
+                        <th>Feature Details</th>
+                        <th>Assign Developer</th>
+                    </tr>
+                </thead>
+                <tbody id="featureChangeRequests">
+                    <!-- Rows for feature change requests will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="col">
+            <a href="#">About</a>
+            <a href="../homepage/index.html">Home</a> 
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024, IT - MANAGER DASHBOARD</p>
+        </div>
+    </footer>
+
+    <script type="module" src="manager-dashboard.js"></script>
+</body>
+</html>

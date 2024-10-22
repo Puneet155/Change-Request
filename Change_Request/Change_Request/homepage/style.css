@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Global Variables */
+:root {
+    --white: white;
+    --primary-color: #ff9800; /* Login button color */
+    --secondary-color: #ffcc80; /* Sign Up button color */
+    --dark-bg: #e68900; /* Darker background for hover effect */
+    --background-color: #f5f5f5;
+    --text-color: #333;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+*::selection {
+    background: var(--primary-color);
+    color: white;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--background-color);
+}
+
+/* Header Section */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 6rem;
+    height: auto;
+}
+
+.logotcs {
+    width: 16rem;
+    height: auto;
+}
+
+/* Home Section */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/main.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 30px;
+    text-align: center; /* Center text for better aesthetics */
+}
+
+.home .content {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.6); /* Light background for contrast */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.home .content h1 {
+    font-size: 5rem;
+    color: var(--text-color);
+    opacity: 0.8; /* Reduced opacity */
+}
+
+.home .content p {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin: 1.5rem 0;
+}
+
+/* Button Styles */
+.btn {
+    padding: 1.5rem 4rem;
+    background: var(--primary-color);
+    color: var(--white);
+    font-size: 2rem;
+    border-radius: 5rem;
+    text-align: center;
+    display: inline-block;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+    opacity: 0.9; /* Reduced opacity */
+}
+
+.btn:hover {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for Sign Up button */
+.btn-signup {
+    padding: 1.5rem 4rem; /* Same padding as login button */
+    background: var(--primary-color); /* Match login button color */
+    color: var(--white);
+    border: 2px solid var(--primary-color); /* Bold border */
+    border-radius: 5rem;
+    opacity: 0.9; /* Reduced opacity */
+}
+
+.btn-signup:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styling */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    flex-shrink: 0;
+}
+
+footer .col {
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: white;
+    margin-right: 2rem;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .home .content h1 {
+        font-size: 4rem; /* Smaller heading on mobile */
+    }
+
+    .home .content p {
+        font-size: 1.6rem; /* Smaller paragraph on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .btn {
+        height: 4rem;
+        width: auto; /* Remove fixed width for better mobile compatibility */
+        font-size: 1.5rem; /* Smaller button text */
+    }
+
+    .home .content h1 {
+        font-size: 3.5rem; /* Smaller heading on mobile */
+    }
+
+    .home .content p {
+        font-size: 1.4rem; /* Smaller paragraph on mobile */
+    }
+
+    .logo, .logotcs {
+        width: 5rem; /* Smaller logo on mobile */
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Dashboard</title>
+    <link rel="stylesheet" href="../homepage/style.css"> <!-- Same CSS file as employee homepage -->
+    <link rel="stylesheet" href="developer_dashboard.css">
+</head>
+<body>
+
+    <!-- Header Section (matched to Manager Dashboard) -->
+    <section id="header">
+        <a href="#"><img src="../homepage/images/tcs.svg" class="logotcs" alt="TCS Logo"></a>
+        <a href="#"><img src="../homepage/images/tata.svg" class="logo" alt="Tata Logo"></a>
+    </section>
+
+    <!-- Developer Dashboard Content -->
+    <section class="dashboard-content">
+        <h2>Developer Dashboard</h2>
+
+        <!-- Search/Filter Tasks -->
+        <div class="task-filter">
+            <input type="text" id="taskSearch" placeholder="Search tasks...">
+        </div>
+
+        <!-- Task List -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature Details</th>
+                    <th>Requested By</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                    <th>Deadline</th>
+                    <th>Progress</th>
+                    <th>Update Status</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody">
+                <!-- Dynamic task rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer Section (matched to Manager Dashboard) -->
+    <footer>
+        <div class="col">
+            <a href="#">About</a>
+            <a href="../homepage/index.html">Home</a> 
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024, IT - DEVELOPER DASHBOARD</p>
+        </div>
+    </footer>
+
+    <!-- Include Firebase scripts with type="module" -->
+    <script type="module" src="developer_dashboard.js"></script>
+</body>
+</html>
